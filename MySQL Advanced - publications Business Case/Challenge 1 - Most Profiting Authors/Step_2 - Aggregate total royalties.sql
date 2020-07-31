@@ -1,6 +1,6 @@
 SELECT
-    au_id,
-    title_id,
+    au_id  AS author_ID,
+    title_id AS title_ID,
     SUM(sales_royalty) AS aggregated_royalties
     FROM
 (
