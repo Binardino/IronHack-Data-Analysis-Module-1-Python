@@ -26,3 +26,11 @@ GROUP BY au_id, title_id
 ORDER BY aggregated_royalties DESC
 )
 ;
+
+SELECT 
+    author_ID,
+    SUM(aggregated_royalties + sum_advance) AS author_profits
+FROM profits_authors
+GROUP BY author_ID
+ORDER BY author_profits DESC
+;
